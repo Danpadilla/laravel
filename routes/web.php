@@ -12,7 +12,7 @@ use Illuminate\Support\Facades\Route;
 | contains the "web" middleware group. Now create something great!
 |
 */
+Route::get('/', ['as' => 'home.index' , 'uses' => 'HomeController@index']);
+Route::post('/send-post', ['as' => 'send.post' , 'uses' => 'HomeController@executePost']);
 
-Route::get('/', function () {
-    return view('welcome');
-});
+
